@@ -1,0 +1,8 @@
+title: Çağlar Bey'in Kişisel Web Sitesi
+email: cag952kap@gmail.com
+description: Siber güvenlik, mekatronik ve algoritma çözümleri blogu.
+baseurl: ""
+url: "https://caglarbey.github.io"
+theme: minima
+plugins:
+  - jekyll-feed
