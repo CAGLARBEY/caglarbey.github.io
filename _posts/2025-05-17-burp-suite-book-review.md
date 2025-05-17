@@ -6,7 +6,7 @@ categories: tryhackme burpsuite book
 ---
 
 
-![A Complete Guide to Burp Suite](/assets/images/burp-book-cover.jpg)
+![A Complete Guide to Burp Suite](/assets/images/burp-book-cover.png)
 
 This week I read the book **“A Complete Guide to Burp Suite”**.  
 I have never seen a book that explains Burp Suite in such detail.  
