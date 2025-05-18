@@ -24,3 +24,7 @@ I will share the ctf solutions here in the form of a report.
 ### Arduino Notes
 [GitHub Repo](https://github.com/CAGLARBEY/Arduino_Notes)
 I will develop an autonomous vehicle with Arduino. I will share my coding and notes here before I develop it.
+
+## Matlab Lecture Notes 
+[GitHub Repo](https://github.com/CAGLARBEY/matlab-lecture-notes)
+I will share the notes and articles I took in the Matlab course.
