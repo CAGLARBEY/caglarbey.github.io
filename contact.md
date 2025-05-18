@@ -1,6 +1,6 @@
 ---
 layout: page
-title: İletişim
+title: Contact
 permalink: /contact/
 ---
 
