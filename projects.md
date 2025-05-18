@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Projeler
+title: Projects
 permalink: /projects/
 ---
 
