@@ -6,8 +6,9 @@ permalink: /about/
 
 ![Avatar](/assets/images/avatar.jpg)
 
-Merhaba! Ben Çağlar Bey, mekatronik mühendisiyim ve siber güvenlik alanına ilgi duyuyorum.  
-Özellikle **ağ güvenliği**, **CTF çözümü**, **bash script yazımı** ve **web uygulama güvenliği** konularında kendimi geliştiriyorum.  
-Ayrıca geçmişte görüntü işleme ve makine öğrenmesini içeren bir robotik sistem projesi üzerinde çalıştım.  
+Hello!  I'm 1r0n W1ng, I'm a mechatronics engineer and I'm interested in cybersecurity. 
+I'm particularly interested in **network security**, **CTF resolution**, **bash scripting** and **web application security**. 
+I've also worked on a robotic system project involving image processing and machine learning in the past.
 
-**İlgi alanlarım:** Siber güvenlik, mekatronik, programlama, ağ güvenliği, sistem yönetimi.
+**My areas of interest:** Cyber security, mechatronics, programming, network security, system administration.
+
