@@ -4,7 +4,7 @@ title: İletişim
 permalink: /contact/
 ---
 
-E-posta: [cag952kap@gmail.com](mailto:cag952kap@gmail.com)
+E-mail: [cag952kap@gmail.com](mailto:cag952kap@gmail.com)
 
-Sosyal Medya:  
+Social Media::  
 - [Medium](https://medium.com/@1r0n_W1ng)  
