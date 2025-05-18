@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Ana Sayfa
+title: Home 
 ---
 
 # Hi, I'm 1r0n W1ng !
