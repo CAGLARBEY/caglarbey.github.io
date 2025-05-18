@@ -4,18 +4,23 @@ title: Projeler
 permalink: /projects/
 ---
 
-## Öne Çıkan Projeler
+## Featured Projects
 
-### LeetCode Çözümleri  
+### LeetCode Solutions  
 [GitHub Repo](https://github.com/CAGLARBEY/leetcodeseries)  
-Algoritma problemleri çözümü paylaşımlarım.
+Algorithm problem solving posts.
 
-### Robotik Kol Görüntü İşleme  
+### Robotic Arm Image Processing  
 [GitHub Repo](https://github.com/CAGLARBEY/MTU2-ve-Bitirme-Projesi)  
-Robot kol kullanarak görüntü işleme ve makine öğrenmesi tabanlı kutu algılama sistemi.
+Box detection system based on image processing and machine learning using a robotic arm.
 
-### Bash Script Notlarım  
+### My Bash Script Notes  
 [GitHub Repo](https://github.com/CAGLARBEY/BashScript)
-
-### CTF Raporları  
+I will develop scripts and applications related to Bash language. I will share them here.
+### CTF Reports  
 [GitHub Repo](https://github.com/CAGLARBEY/CTF-Reports)
+I will share the ctf solutions here in the form of a report.
+
+### Arduino Notes
+[GitHub Repo](https://github.com/CAGLARBEY/Arduino_Notes)
+I will develop an autonomous vehicle with Arduino. I will share my coding and notes here before I develop it.
