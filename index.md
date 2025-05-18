@@ -3,13 +3,13 @@ layout: home
 title: Ana Sayfa
 ---
 
-# Merhaba, ben 1r0n W1ng !
+# Hi, I'm 1r0n W1ng !
 
-Siber güvenlik ve mekatronik alanında projeler geliştiriyor, blog yazıları yazıyorum.
+I develop projects and write blog posts on cyber security and mechatronics.
 
 ---
 
-## Son Yazılarım
+## My Last Posts
 
 {% for post in site.posts limit:10 %}
 - [{{ post.title }}]({{ post.url }}) ({{ post.date | date: "%d %b %Y" }})
@@ -17,6 +17,6 @@ Siber güvenlik ve mekatronik alanında projeler geliştiriyor, blog yazıları 
 
 ---
 
-## Hakkımda
+## About me
 
-[Hakkımda sayfasını ziyaret et](/about)
+[Visit the About Me page](/about)
