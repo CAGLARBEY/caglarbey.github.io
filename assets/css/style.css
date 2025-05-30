@@ -1,20 +1,12 @@
-/* assets/css/style.css */
-
 body {
   background-color: #000000; /* siyah arka plan */
-  color: #ffffff;           /* yazı rengi beyaz */
+  color: #ffffff; /* beyaz yazı */
 }
 
 a {
-  color: #00bfff; /* bağlantılar için açık mavi */
+  color: #00ffff; /* linkler için açık mavi */
 }
 
-.site-header,
-.site-footer {
-  background-color: #111111; /* header/footer daha koyu ton */
-  color: #ffffff;
-}
-
-.site-nav .page-link {
-  color: #ffffff;
+h1, h2, h3, h4, h5, h6 {
+  color: #ffffff; /* başlıklar da beyaz */
 }
