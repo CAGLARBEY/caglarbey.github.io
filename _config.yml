@@ -6,3 +6,5 @@ url: "https://caglarbey.github.io"
 theme: minima
 plugins:
   - jekyll-feed
+include:
+  - _includes/head-custom.html
