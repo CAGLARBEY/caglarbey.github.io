@@ -6,7 +6,7 @@ permalink: /about/
 
 ![Avatar](/assets/images/avatar.jpg)
 
-Hello!  I'm 1r0n W1ng, I'm a mechatronics engineer and I'm interested in cybersecurity. 
+Hello!  I'm Çağlar, I'm a mechatronics engineer and I'm interested in cybersecurity. 
 I'm particularly interested in **network security**, **CTF resolution**, **bash scripting** and **web application security**. 
 I've also worked on a robotic system project involving image processing and machine learning in the past.
 
