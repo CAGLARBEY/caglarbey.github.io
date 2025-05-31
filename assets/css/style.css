@@ -1,139 +1,191 @@
-/* Genel Stiller */
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-  line-height: 1.6;
-  color: #333;
-  background-color: #fff;
-  margin: 0;
-  padding: 0;
+/* Tema Değişkenleri */
+:root {
+  /* Açık Tema Renkleri */
+  --bg-color: #f8f9fa;
+  --text-color: #212529;
+  --link-color: #0d6efd;
+  --accent-color: #495057;
+  --header-bg: #ffffff;
+  --border-color: #dee2e6;
+  --code-bg: #f1f3f5;
+  --box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  --list-marker: #adb5bd;
 }
 
-/* Container ve Layout */
+.dark-theme {
+  /* Koyu Tema Renkleri (daha soft) */
+  --bg-color: #212529;
+  --text-color: #e9ecef;
+  --link-color: #4dabf7;
+  --accent-color: #adb5bd;
+  --header-bg: #343a40;
+  --border-color: #495057;
+  --code-bg: #2b3035;
+  --box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  --list-marker: #6c757d;
+}
+
+/* Temel Stiller */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Layout */
 .container {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
 }
 
-/* Header/Navigasyon */
+/* Header */
+header {
+  background-color: var(--header-bg);
+  padding: 20px 0;
+  box-shadow: var(--box-shadow);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
 header nav {
   text-align: center;
-  margin-bottom: 30px;
-  padding: 15px 0;
-  border-bottom: 1px solid #eee;
 }
 
 header nav a {
-  margin: 0 10px;
+  margin: 0 15px;
+  color: var(--text-color);
   text-decoration: none;
-  color: #0366d6;
+  font-weight: 500;
+  transition: color 0.2s;
 }
 
 header nav a:hover {
-  text-decoration: underline;
+  color: var(--link-color);
 }
 
-/* Markdown İçeriği için Ortalama */
+/* İçerik */
 .content-inner {
-  text-align: center;
-}
-
-.content-inner > * {
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
+  padding: 30px 0;
 }
 
 /* Başlıklar */
-.content-inner h1,
-.content-inner h2,
-.content-inner h3,
-.content-inner h4,
-.content-inner h5,
-.content-inner h6 {
-  text-align: center;
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-color);
   margin-top: 1.5em;
   margin-bottom: 0.8em;
   line-height: 1.2;
 }
 
-.content-inner h1 {
-  font-size: 2em;
-  border-bottom: 1px solid #eaecef;
-  padding-bottom: 0.3em;
+h1 {
+  font-size: 2.2rem;
+  text-align: center;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--border-color);
 }
 
-/* Paragraflar ve Metin */
-.content-inner p {
-  text-align: center;
-  margin-bottom: 16px;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
+h2 {
+  font-size: 1.8rem;
+}
+
+/* Paragraflar */
+p {
+  margin-bottom: 1.2em;
+  font-size: 1.05rem;
 }
 
 /* Listeler */
-.content-inner ul,
-.content-inner ol {
-  display: inline-block;
-  text-align: left;
+ul, ol {
+  margin: 1.5em auto;
   padding-left: 2em;
-  margin: 16px auto;
 }
 
-.content-inner li {
-  margin-bottom: 0.5em;
+ul {
+  list-style-type: none;
 }
 
-/* Görseller */
-.content-inner img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  margin: 20px auto;
-  border-radius: 4px;
+ul li {
+  position: relative;
+  padding-left: 1.5em;
+  margin-bottom: 0.6em;
 }
 
-/* Tablolar */
-.content-inner table {
-  border-collapse: collapse;
-  margin: 20px auto;
-  display: block;
-  overflow-x: auto;
+ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--list-marker);
+  font-weight: bold;
 }
 
-.content-inner table th,
-.content-inner table td {
-  padding: 6px 13px;
-  border: 1px solid #dfe2e5;
+/* Linkler */
+a {
+  color: var(--link-color);
+  text-decoration: none;
+  transition: color 0.2s;
 }
 
-/* Kod Blokları */
-.content-inner pre {
-  background-color: #f6f8fa;
-  border-radius: 3px;
-  padding: 16px;
-  overflow: auto;
-  text-align: left;
-  max-width: 700px;
-  margin: 20px auto;
+a:hover {
+  text-decoration: underline;
 }
 
-.content-inner code {
-  font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+/* Tema Butonu */
+#theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: var(--header-bg);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 6px 12px;
+  cursor: pointer;
+  z-index: 1000;
+  font-size: 0.9rem;
+  box-shadow: var(--box-shadow);
+  transition: all 0.3s ease;
+}
+
+#theme-toggle:hover {
+  background-color: var(--border-color);
 }
 
 /* Footer */
 footer {
   text-align: center;
-  margin-top: 40px;
+  margin-top: 50px;
   padding-top: 20px;
-  border-top: 1px solid #eee;
-  color: #6a737d;
-  font-size: 14px;
+  border-top: 1px solid var(--border-color);
+  color: var(--accent-color);
+  font-size: 0.9rem;
 }
 
-/* Responsive Düzen */
+/* About Sayfası Özel Stilleri */
+.page-about .content-inner {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.page-about p {
+  text-align: center;
+  margin: 0 auto 25px;
+  line-height: 1.8;
+  max-width: 650px;
+}
+
+.page-about ul {
+  display: inline-block;
+  text-align: left;
+  columns: 2;
+  column-gap: 40px;
+}
+
+/* Responsive Tasarım */
 @media (max-width: 768px) {
   .container {
     padding: 15px;
@@ -141,49 +193,21 @@ footer {
   
   header nav a {
     display: inline-block;
-    margin: 5px;
+    margin: 5px 10px;
   }
   
-  .content-inner ul,
-  .content-inner ol {
-    padding-left: 1.5em;
+  .page-about ul {
+    columns: 1;
   }
   
-  .content-inner pre {
-    padding: 12px;
-  }
-}
-
-/* Koyu Tema Desteği */
-@media (prefers-color-scheme: dark) {
-  body {
-    color: #c9d1d9;
-    background-color: #0d1117;
+  h1 {
+    font-size: 1.8rem;
   }
   
-  header nav {
-    border-bottom-color: #30363d;
-  }
-  
-  header nav a {
-    color: #58a6ff;
-  }
-  
-  .content-inner h1 {
-    border-bottom-color: #30363d;
-  }
-  
-  .content-inner pre {
-    background-color: #161b22;
-  }
-  
-  .content-inner table th,
-  .content-inner table td {
-    border-color: #30363d;
-  }
-  
-  footer {
-    border-top-color: #30363d;
-    color: #8b949e;
+  #theme-toggle {
+    top: 15px;
+    right: 15px;
+    font-size: 0.8rem;
+    padding: 5px 10px;
   }
 }
