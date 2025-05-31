@@ -1,16 +1,8 @@
 title: Çağlar Personal Website
 email: cag952kap@gmail.com
 description: Cybersecurity, mechatronics and algorithm solutions blog.
-baseurl: ""  # Eğer GitHub Pages kök dizini değilse buraya repo adı gelir
+baseurl: ""
 url: "https://caglarbey.github.io"
 theme: minima
-
 plugins:
   - jekyll-feed
-
-markdown: kramdown
-kramdown:
-  syntax_highlighter: rouge
-  auto_ids: true
-  hard_wrap: false
-  input: GFM
