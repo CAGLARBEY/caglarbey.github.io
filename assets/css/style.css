@@ -137,8 +137,12 @@ footer {
     color: inherit;
     border: 2px solid currentColor;
     border-radius: 6px;
-    padding: 6px 12px;
+    padding: 6px 8px;  /* Sağ-sol padding azaltıldı */
     cursor: pointer;
     z-index: 999;
     font-size: 14px;
+    white-space: nowrap; /* Metin tek satırda */
+    max-width: 100px;    /* Maksimum genişlik sınırı */
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
