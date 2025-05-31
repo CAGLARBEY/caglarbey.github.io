@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-![Avatar](/assets/images/avatar.jpg)
+
 
 Hello! I’m Çağlar Kapcak, a mechatronics engineer and cybersecurity enthusiast. My education in mechatronics has provided me with a solid foundation in electronics, control systems, and programming. I am currently applying this knowledge to securing the digital world.
 
