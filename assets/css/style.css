@@ -17,6 +17,7 @@
     --sidebar-link: #4fc3f7;
 }
 
+/* Genel yapı */
 body {
     margin: 0;
     padding: 0;
@@ -29,6 +30,7 @@ body {
     line-height: 1.6;
 }
 
+/* Sol menü */
 .sidebar {
     width: 250px;
     background-color: var(--sidebar-bg);
@@ -58,7 +60,7 @@ body {
     color: var(--link-color);
 }
 
-
+/* İçerik alanı */
 .content {
     margin-left: 270px;
     padding: 40px;
@@ -71,10 +73,16 @@ body {
 .content-inner {
     max-width: 800px;
     width: 100%;
-    text-align: center; 
+    text-align: center; /* Yazıları ortaya hizalamak için eklendi */
 }
 
+/* ALT METİNLERİN DE TAM ORTALANMASI İÇİN */
+.content-inner,
+.content-inner * {
+    text-align: center !important;
+}
 
+/* Yazılar ve başlıklar */
 h1 {
     font-size: 32px;
     color: var(--text-color);
@@ -97,7 +105,7 @@ h3 {
 p {
     font-size: 17px;
     margin-bottom: 16px;
-    text-align: center;
+    text-align: center; /* Paragraflar ortalandı */
 }
 
 a {
@@ -111,7 +119,7 @@ a:hover {
 }
 
 ul {
-    padding-left: 0; 
+    padding-left: 0; /* Sol boşluk kaldırıldı */
     margin-bottom: 16px;
     list-style-position: inside;
     text-align: center; /* Liste ortalandı */
@@ -133,7 +141,8 @@ footer {
 #theme-toggle {
     position: fixed;
     top: 20px;
-    right: 20px;
+    right: 50%;
+    transform: translateX(50%);
     background: none;
     color: inherit;
     border: 2px solid currentColor;
@@ -141,9 +150,6 @@ footer {
     padding: 8px 16px;
     cursor: pointer;
     z-index: 999;
-    font-size: 16px; 
-    text-align: center; 
-   
-    right: 50%;
-    transform: translateX(50%);
+    font-size: 16px;
+    text-align: center;
 }
