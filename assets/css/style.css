@@ -27,7 +27,6 @@ body {
     display: flex;
     min-height: 100vh;
     font-size: 16px;
-    text-align: center;
     line-height: 1.6;
 }
 
@@ -64,11 +63,11 @@ body {
 /* İçerik alanı */
 .content {
     margin-left: 270px;
-    padding: 40px 80px 40px 140px;  /* Üst Sağ Alt Sol, sola olan paddingi arttırdım */
+    padding: 40px 60px 40px 100px;  /* Üst Sağ Alt Sol */
     box-sizing: border-box;
     width: calc(100% - 270px);
     display: flex;
-    justify-content: flex-start; /* solda hizalama */
+    justify-content: flex-start;
 }
 
 .content-inner {
@@ -99,7 +98,6 @@ h3 {
 p {
     font-size: 17px;
     margin-bottom: 16px;
-    /* Ortalamayı kaldırıp sola hizalama */
     text-align: center;
 }
 
@@ -116,12 +114,10 @@ a:hover {
 ul {
     padding-left: 20px;
     margin-bottom: 16px;
-    text-align: left; /* Listeyi sola hizaladım */
 }
 
 li {
-    /* Ortalamayı kaldırdım, sola hizalandı */
-    text-align: left;
+    text-align: center;
     list-style-position: inside;
 }
 
@@ -136,7 +132,7 @@ footer {
 #theme-toggle {
     position: fixed;
     top: 20px;
-    left: 20px; /* Butonu biraz sola aldım */
+    right: 20px;
     background: none;
     color: inherit;
     border: 2px solid currentColor;
