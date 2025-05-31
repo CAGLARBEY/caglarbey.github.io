@@ -1,191 +1,224 @@
-/* Tema Değişkenleri */
 :root {
-  /* Açık Tema Renkleri */
-  --bg-color: #f8f9fa;
-  --text-color: #212529;
-  --link-color: #0d6efd;
-  --accent-color: #495057;
-  --header-bg: #ffffff;
-  --border-color: #dee2e6;
-  --code-bg: #f1f3f5;
-  --box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  --list-marker: #adb5bd;
+  --bg-color: #ffffff;
+  --text-color: #111111;
+  --link-color: #005fcc;
+  --accent-color: #444;
+  --sidebar-bg: #f4f4f4;
+  --sidebar-link: #222;
 }
 
-.dark-theme {
-  /* Koyu Tema Renkleri (daha soft) */
-  --bg-color: #212529;
-  --text-color: #e9ecef;
-  --link-color: #4dabf7;
-  --accent-color: #adb5bd;
-  --header-bg: #343a40;
-  --border-color: #495057;
-  --code-bg: #2b3035;
-  --box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-  --list-marker: #6c757d;
+[data-theme="dark"] {
+  --bg-color: #121212;
+  --text-color: #f1f1f1;
+  --link-color: #00e5ff;
+  --accent-color: #888;
+  --sidebar-bg: #1e1e1e;
+  --sidebar-link: #4fc3f7;
 }
 
-/* Temel Stiller */
+/* Genel yapı */
 body {
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  line-height: 1.6;
   margin: 0;
   padding: 0;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  min-height: 100vh;
+  font-size: 16px;
+  line-height: 1.6;
 }
 
-/* Layout */
+/* Sol menü */
+.sidebar {
+  width: 250px;
+  background-color: var(--sidebar-bg);
+  padding: 30px 20px;
+  box-sizing: border-box;
+  height: 100vh;
+  position: fixed;
+  overflow-y: auto;
+}
+
+.sidebar h1 {
+  color: var(--link-color);
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.sidebar nav a {
+  display: block;
+  color: var(--sidebar-link);
+  text-decoration: none;
+  margin: 10px 0;
+  font-weight: 600;
+  font-size: 17px;
+}
+
+.sidebar nav a:hover {
+  color: var(--link-color);
+}
+
+/* İçerik alanı */
+.content {
+  margin-left: 250px;
+  padding: 40px 60px;
+  box-sizing: border-box;
+  width: calc(100% - 250px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
+
+/* Container ve Layout */
 .container {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
 }
 
-/* Header */
-header {
-  background-color: var(--header-bg);
-  padding: 20px 0;
-  box-shadow: var(--box-shadow);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-
+/* Header/Navigasyon */
 header nav {
   text-align: center;
+  margin-bottom: 30px;
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
 }
 
 header nav a {
-  margin: 0 15px;
-  color: var(--text-color);
+  margin: 0 10px;
   text-decoration: none;
-  font-weight: 500;
-  transition: color 0.2s;
-}
-
-header nav a:hover {
   color: var(--link-color);
 }
 
-/* İçerik */
-.content-inner {
-  padding: 30px 0;
+header nav a:hover {
+  text-decoration: underline;
 }
 
-/* Başlıklar */
-h1, h2, h3, h4, h5, h6 {
+/* Markdown İçeriği için Ortalama */
+.content-inner {
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Başlıklar ve yazılar */
+h1, h2, h3, p, li {
+  margin-top: 0;
+  margin-bottom: 16px;
   color: var(--text-color);
+}
+
+.content-inner h1,
+.content-inner h2,
+.content-inner h3,
+.content-inner h4,
+.content-inner h5,
+.content-inner h6 {
+  text-align: center;
   margin-top: 1.5em;
   margin-bottom: 0.8em;
   line-height: 1.2;
 }
 
-h1 {
-  font-size: 2.2rem;
+.content-inner h1 {
+  font-size: 2em;
+  border-bottom: 1px solid #eaecef;
+  padding-bottom: 0.3em;
+}
+
+.content-inner p {
   text-align: center;
-  padding-bottom: 10px;
-  border-bottom: 2px solid var(--border-color);
-}
-
-h2 {
-  font-size: 1.8rem;
-}
-
-/* Paragraflar */
-p {
-  margin-bottom: 1.2em;
-  font-size: 1.05rem;
+  margin-bottom: 16px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Listeler */
-ul, ol {
-  margin: 1.5em auto;
+.content-inner ul,
+.content-inner ol {
+  display: inline-block;
+  text-align: left;
   padding-left: 2em;
+  margin: 16px auto;
 }
 
-ul {
-  list-style-type: none;
+.content-inner li {
+  margin-bottom: 0.5em;
 }
 
-ul li {
-  position: relative;
-  padding-left: 1.5em;
-  margin-bottom: 0.6em;
+/* Görseller */
+.content-inner img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 20px auto;
+  border-radius: 4px;
 }
 
-ul li::before {
-  content: "•";
-  position: absolute;
-  left: 0;
-  color: var(--list-marker);
-  font-weight: bold;
+/* Tablolar */
+.content-inner table {
+  border-collapse: collapse;
+  margin: 20px auto;
+  display: block;
+  overflow-x: auto;
 }
 
-/* Linkler */
-a {
-  color: var(--link-color);
-  text-decoration: none;
-  transition: color 0.2s;
+.content-inner table th,
+.content-inner table td {
+  padding: 6px 13px;
+  border: 1px solid #dfe2e5;
 }
 
-a:hover {
-  text-decoration: underline;
+/* Kod Blokları */
+.content-inner pre {
+  background-color: #f6f8fa;
+  border-radius: 3px;
+  padding: 16px;
+  overflow: auto;
+  text-align: left;
+  max-width: 700px;
+  margin: 20px auto;
 }
 
-/* Tema Butonu */
-#theme-toggle {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  background: var(--header-bg);
-  color: var(--text-color);
-  border: 1px solid var(--border-color);
-  border-radius: 20px;
-  padding: 6px 12px;
-  cursor: pointer;
-  z-index: 1000;
-  font-size: 0.9rem;
-  box-shadow: var(--box-shadow);
-  transition: all 0.3s ease;
-}
-
-#theme-toggle:hover {
-  background-color: var(--border-color);
+.content-inner code {
+  font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
 }
 
 /* Footer */
 footer {
-  text-align: center;
-  margin-top: 50px;
-  padding-top: 20px;
-  border-top: 1px solid var(--border-color);
+  margin-top: 40px;
+  font-size: 14px;
   color: var(--accent-color);
-  font-size: 0.9rem;
-}
-
-/* About Sayfası Özel Stilleri */
-.page-about .content-inner {
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-.page-about p {
   text-align: center;
-  margin: 0 auto 25px;
-  line-height: 1.8;
-  max-width: 650px;
 }
 
-.page-about ul {
-  display: inline-block;
-  text-align: left;
-  columns: 2;
-  column-gap: 40px;
+/* Tema geçiş düğmesi */
+#theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: none;
+  color: inherit;
+  border: 2px solid currentColor;
+  border-radius: 6px;
+  padding: 6px 8px;
+  cursor: pointer;
+  z-index: 999;
+  font-size: 14px;
+  white-space: nowrap;
+  max-width: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
 }
 
-/* Responsive Tasarım */
+/* Responsive Düzen */
 @media (max-width: 768px) {
   .container {
     padding: 15px;
@@ -193,21 +226,15 @@ footer {
   
   header nav a {
     display: inline-block;
-    margin: 5px 10px;
+    margin: 5px;
   }
   
-  .page-about ul {
-    columns: 1;
+  .content-inner ul,
+  .content-inner ol {
+    padding-left: 1.5em;
   }
   
-  h1 {
-    font-size: 1.8rem;
-  }
-  
-  #theme-toggle {
-    top: 15px;
-    right: 15px;
-    font-size: 0.8rem;
-    padding: 5px 10px;
+  .content-inner pre {
+    padding: 12px;
   }
 }
