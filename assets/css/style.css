@@ -1,12 +1,110 @@
+/* Genel görünüm */
 body {
-  background-color: #000000; /* siyah arka plan */
-  color: #ffffff; /* beyaz yazı */
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #f1f1f1;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    min-height: 100vh;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Sol menü */
+.sidebar {
+    width: 250px;
+    background-color: #1e1e1e;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    height: 100vh;
+    position: fixed;
+    overflow-y: auto;
+}
+
+.sidebar h1 {
+    color: #00e5ff;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.sidebar nav a {
+    display: block;
+    color: #4fc3f7;
+    text-decoration: none;
+    margin: 10px 0;
+    font-weight: 600;
+    font-size: 17px;
+}
+
+.sidebar nav a:hover {
+    color: #00e5ff;
+}
+
+/* İçerik alanı */
+.content {
+    margin-left: 270px;
+    padding: 40px;
+    box-sizing: border-box;
+    width: calc(100% - 270px);
+    display: flex;
+    justify-content: center;
+}
+
+.content-inner {
+    max-width: 800px;
+    width: 100%;
+}
+
+/* Başlıklar ve yazılar */
+h1 {
+    font-size: 32px;
+    color: #ffffff;
+    margin-top: 0;
+    text-align: center;
+}
+
+h2 {
+    font-size: 26px;
+    color: #ffffff;
+    text-align: center;
+}
+
+h3 {
+    font-size: 22px;
+    color: #ffffff;
+    text-align: center;
+}
+
+p {
+    font-size: 17px;
+    margin-bottom: 16px;
+    text-align: center;
 }
 
 a {
-  color: #00ffff; /* linkler için açık mavi */
+    color: #4fc3f7;
+    text-decoration: none;
+    font-weight: 500;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  color: #ffffff; /* başlıklar da beyaz */
+a:hover {
+    text-decoration: underline;
+}
+
+ul {
+    padding-left: 20px;
+    margin-bottom: 16px;
+}
+
+li {
+    text-align: center;
+    list-style-position: inside;
+}
+
+footer {
+    margin-top: 40px;
+    font-size: 14px;
+    color: #888;
+    text-align: center;
 }
