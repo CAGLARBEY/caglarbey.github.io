@@ -1,22 +1,31 @@
+/* Tema Değişkenleri */
 :root {
+  /* Açık Tema */
   --bg-color: #ffffff;
   --text-color: #111111;
   --link-color: #005fcc;
-  --accent-color: #444;
+  --accent-color: #444444;
   --sidebar-bg: #f4f4f4;
-  --sidebar-link: #222;
+  --sidebar-link: #222222;
+  --border-color: #e1e4e8;
+  --header-bg: #f8f9fa;
+  --list-marker: #666666;
 }
 
 [data-theme="dark"] {
+  /* Koyu Tema */
   --bg-color: #121212;
   --text-color: #f1f1f1;
   --link-color: #00e5ff;
-  --accent-color: #888;
+  --accent-color: #888888;
   --sidebar-bg: #1e1e1e;
   --sidebar-link: #4fc3f7;
+  --border-color: #30363d;
+  --header-bg: #1f1f1f;
+  --list-marker: #aaaaaa;
 }
 
-/* Genel yapı */
+/* Temel Stiller */
 body {
   margin: 0;
   padding: 0;
@@ -27,214 +36,189 @@ body {
   min-height: 100vh;
   font-size: 16px;
   line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Sol menü */
+/* Layout */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Sidebar */
 .sidebar {
   width: 250px;
   background-color: var(--sidebar-bg);
   padding: 30px 20px;
-  box-sizing: border-box;
-  height: 100vh;
   position: fixed;
+  height: 100vh;
   overflow-y: auto;
+  transition: all 0.3s ease;
 }
 
 .sidebar h1 {
   color: var(--link-color);
-  font-size: 24px;
-  margin-bottom: 20px;
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  text-align: center;
 }
 
 .sidebar nav a {
   display: block;
   color: var(--sidebar-link);
   text-decoration: none;
-  margin: 10px 0;
-  font-weight: 600;
-  font-size: 17px;
+  margin: 15px 0;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
 }
 
 .sidebar nav a:hover {
   color: var(--link-color);
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
-/* İçerik alanı */
+/* Main Content */
 .content {
   margin-left: 250px;
-  padding: 40px 60px;
-  box-sizing: border-box;
+  padding: 40px;
   width: calc(100% - 250px);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-  line-height: 1.6;
-  color: var(--text-color);
-  background-color: var(--bg-color);
+  box-sizing: border-box;
 }
 
-/* Container ve Layout */
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-/* Header/Navigasyon */
-header nav {
-  text-align: center;
-  margin-bottom: 30px;
-  padding: 15px 0;
-  border-bottom: 1px solid #eee;
-}
-
-header nav a {
-  margin: 0 10px;
-  text-decoration: none;
-  color: var(--link-color);
-}
-
-header nav a:hover {
-  text-decoration: underline;
-}
-
-/* Markdown İçeriği için Ortalama */
 .content-inner {
   max-width: 800px;
-  width: 100%;
+  margin: 0 auto;
   text-align: center;
 }
 
-/* Başlıklar ve yazılar */
-h1, h2, h3, p, li {
-  margin-top: 0;
-  margin-bottom: 16px;
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
   color: var(--text-color);
-}
-
-.content-inner h1,
-.content-inner h2,
-.content-inner h3,
-.content-inner h4,
-.content-inner h5,
-.content-inner h6 {
-  text-align: center;
   margin-top: 1.5em;
   margin-bottom: 0.8em;
   line-height: 1.2;
 }
 
-.content-inner h1 {
-  font-size: 2em;
-  border-bottom: 1px solid #eaecef;
-  padding-bottom: 0.3em;
+h1 {
+  font-size: 2.2rem;
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 10px;
 }
 
-.content-inner p {
-  text-align: center;
-  margin-bottom: 16px;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
+h2 {
+  font-size: 1.8rem;
 }
 
-/* Listeler */
-.content-inner ul,
-.content-inner ol {
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  margin-bottom: 1.5em;
+  line-height: 1.7;
+}
+
+/* Lists */
+ul, ol {
   display: inline-block;
   text-align: left;
+  margin: 1.5em auto;
   padding-left: 2em;
-  margin: 16px auto;
 }
 
-.content-inner li {
-  margin-bottom: 0.5em;
+ul {
+  list-style-type: none;
 }
 
-/* Görseller */
-.content-inner img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  margin: 20px auto;
-  border-radius: 4px;
+ul li {
+  position: relative;
+  padding-left: 1.8em;
+  margin-bottom: 0.8em;
 }
 
-/* Tablolar */
-.content-inner table {
-  border-collapse: collapse;
-  margin: 20px auto;
-  display: block;
-  overflow-x: auto;
+ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--list-marker);
+  font-size: 1.2em;
 }
 
-.content-inner table th,
-.content-inner table td {
-  padding: 6px 13px;
-  border: 1px solid #dfe2e5;
+/* Links */
+a {
+  color: var(--link-color);
+  text-decoration: none;
+  transition: color 0.2s ease;
 }
 
-/* Kod Blokları */
-.content-inner pre {
-  background-color: #f6f8fa;
-  border-radius: 3px;
-  padding: 16px;
-  overflow: auto;
-  text-align: left;
-  max-width: 700px;
-  margin: 20px auto;
+a:hover {
+  text-decoration: underline;
 }
 
-.content-inner code {
-  font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
-}
-
-/* Footer */
-footer {
-  margin-top: 40px;
-  font-size: 14px;
-  color: var(--accent-color);
-  text-align: center;
-}
-
-/* Tema geçiş düğmesi */
+/* Tema Butonu */
 #theme-toggle {
   position: fixed;
   top: 20px;
   right: 20px;
-  background: none;
-  color: inherit;
-  border: 2px solid currentColor;
-  border-radius: 6px;
-  padding: 6px 8px;
+  background: var(--bg-color);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 8px 16px;
   cursor: pointer;
-  z-index: 999;
-  font-size: 14px;
-  white-space: nowrap;
-  max-width: 100px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  text-align: center;
+  z-index: 1000;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
 }
 
-/* Responsive Düzen */
+#theme-toggle:hover {
+  background: var(--border-color);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 50px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border-color);
+  color: var(--accent-color);
+}
+
+/* Responsive Tasarım */
 @media (max-width: 768px) {
-  .container {
-    padding: 15px;
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding: 20px;
   }
   
-  header nav a {
-    display: inline-block;
-    margin: 5px;
+  .content {
+    margin-left: 0;
+    width: 100%;
+    padding: 20px;
   }
   
-  .content-inner ul,
-  .content-inner ol {
-    padding-left: 1.5em;
+  #theme-toggle {
+    top: 10px;
+    right: 10px;
+    padding: 6px 12px;
   }
   
-  .content-inner pre {
-    padding: 12px;
+  h1 {
+    font-size: 1.8rem;
   }
+}
+
+/* Animasyonlar */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.content-inner {
+  animation: fadeIn 0.5s ease-out;
 }
