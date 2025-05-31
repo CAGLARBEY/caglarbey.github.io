@@ -62,43 +62,41 @@ body {
 
 /* İçerik alanı */
 .content {
-    margin-left: 200px;
-    padding: 40px 60px 40px 100px;  /* Üst Sağ Alt Sol */
+    margin-left: 250px; /* Sidebar genişliği ile uyumlu */
+    padding: 40px 60px 40px 60px; /* Kenar boşluklarını eşitledim */
     box-sizing: border-box;
-    width: calc(100% - 270px);
+    width: calc(100% - 250px);
     display: flex;
-    justify-content: flex-start;
+    justify-content: center; /* İçeriği yatayda ortaya al */
 }
 
 .content-inner {
     max-width: 800px;
     width: 100%;
+    text-align: center; /* İçerik yazılarını ortaya hizala */
 }
 
 /* Yazılar ve başlıklar */
+h1, h2, h3, p, li {
+    margin-top: 0;
+    margin-bottom: 16px;
+    color: var(--text-color);
+}
+
 h1 {
     font-size: 32px;
-    color: var(--text-color);
-    text-align: center;
-    margin-top: 0;
 }
 
 h2 {
     font-size: 26px;
-    color: var(--text-color);
-    text-align: center;
 }
 
 h3 {
     font-size: 22px;
-    color: var(--text-color);
-    text-align: center;
 }
 
-p {
+p, li {
     font-size: 17px;
-    margin-bottom: 16px;
-    text-align: center;
 }
 
 a {
@@ -114,13 +112,15 @@ a:hover {
 ul {
     padding-left: 20px;
     margin-bottom: 16px;
+    list-style-position: inside;
+    text-align: center;
 }
 
 li {
-    text-align: center;
     list-style-position: inside;
 }
 
+/* Footer */
 footer {
     margin-top: 40px;
     font-size: 14px;
@@ -137,12 +137,12 @@ footer {
     color: inherit;
     border: 2px solid currentColor;
     border-radius: 6px;
-    padding: 6px 8px;  /* Sağ-sol padding azaltıldı */
+    padding: 6px 8px;  /* Daha kısa padding */
     cursor: pointer;
     z-index: 999;
     font-size: 14px;
-    white-space: nowrap; /* Metin tek satırda */
-    max-width: 100px;    /* Maksimum genişlik sınırı */
+    white-space: nowrap;
+    max-width: 100px;
     overflow: hidden;
     text-overflow: ellipsis;
 }
