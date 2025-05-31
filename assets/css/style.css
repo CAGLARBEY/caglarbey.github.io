@@ -63,7 +63,7 @@ body {
 /* İçerik alanı */
 .content {
     margin-left: 270px;
-    padding: 40px 80px 40px 140px;  /* Üst Sağ Alt Sol, sola olan paddingi arttırdım */
+    padding: 40px 80px 40px 240px;  /* Üst Sağ Alt Sol, sola olan paddingi arttırdım */
     box-sizing: border-box;
     width: calc(100% - 270px);
     display: flex;
