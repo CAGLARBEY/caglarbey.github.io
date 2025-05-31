@@ -1,3 +1,11 @@
+---
+layout: post
+title: "What is Arduino, What Does It Do?"
+date: 2025-05-18
+categories: Arduino
+---
+
+
 # What is Arduino, What Does It Do?
 
 When I was just stepping into the world of technology, I wanted to do something about electronics, but I didn't know where to start.
