@@ -1,1 +1,40 @@
 <link rel="stylesheet" href="/assets/css/style.css">
+<script>
+  // Sayfa yüklendiğinde tercih edilen temayı uygula
+  document.addEventListener('DOMContentLoaded', () => {
+    const currentTheme = localStorage.getItem('theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', currentTheme);
+
+    const toggle = document.getElementById('theme-toggle');
+    if (currentTheme === 'light') {
+      toggle.textContent = '🌙 Dark Mode';
+    } else {
+      toggle.textContent = '☀️ Light Mode';
+    }
+
+    toggle.addEventListener('click', () => {
+      const newTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      toggle.textContent = newTheme === 'dark' ? '☀️ Light Mode' : '🌙 Dark Mode';
+    });
+  });
+</script>
+
+<style>
+  #theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: none;
+    color: inherit;
+    border: 2px solid currentColor;
+    border-radius: 6px;
+    padding: 6px 12px;
+    cursor: pointer;
+    z-index: 999;
+    font-size: 14px;
+  }
+</style>
+
+<button id="theme-toggle">🌓 Tema Değiştir</button>
