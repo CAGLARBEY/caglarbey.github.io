@@ -62,7 +62,7 @@ body {
 
 /* İçerik alanı */
 .content {
-    margin-left: 270px;
+    margin-left: 200px;
     padding: 40px 60px 40px 100px;  /* Üst Sağ Alt Sol */
     box-sizing: border-box;
     width: calc(100% - 270px);
